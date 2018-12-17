@@ -1,6 +1,6 @@
 const path = require('path');
 
-// routes
+// routes to handle when the user "visits" a page
 
 module.exports = function (app) {
 
