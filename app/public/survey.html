@@ -24,7 +24,7 @@
         <hr>
         <form>
             <!-- required info -->
-            <h2 class="display-6">About you:</h2>
+            <h2 class="display-5">About you:</h2>
             <div class="form-group">
                 <label for="name-input">Name:</label>
                 <small id="nameHelpBlock" class="font-text text-muted">*Required</small>
@@ -37,123 +37,124 @@
             </div>
             <hr>
             <!-- questions area -->
+            <h3 class="display-6">Answer truthfully (1: disagree | 5: agree)</h3>
             <div class="form-group">
                 <label for="question1">Question 1:</label>
                 <p>You find it difficult to introduce yourself to other people.</p>
                 <select class="form-control" id="question1">
-                    <option>1 (disagree)</option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (agree)</option>
+                    <option>5</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="question2">Question 2:</label>
                 <p>You often get so lost in thoughts that you ignore or forget your surroundings.</p>
                 <select class="form-control" id="question2">
-                    <option>1 (disagree)</option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (agree)</option>
+                    <option>5</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="question3">Question 3:</label>
                 <p>You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.</p>
                 <select class="form-control" id="question3">
-                    <option>1 (disagree)</option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (agree)</option>
+                    <option>5</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="question4">Question 4:</label>
                 <p>You find it easy to stay relaxed even when there is some pressure.</p>
                 <select class="form-control" id="question4">
-                    <option>1 (disagree)</option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (agree)</option>
+                    <option>5</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="question5">Question 5:</label>
                 <p>You find it difficult to introduce yourself to other people.</p>
                 <select class="form-control" id="question5">
-                    <option>1 (disagree)</option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (agree)</option>
+                    <option>5</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="question6">Question 6:</label>
                 <p>You do not usually initiate conversations.</p>
                 <select class="form-control" id="question6">
-                    <option>1 (disagree)</option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (agree)</option>
+                    <option>5</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="question7">Question 7:</label>
                 <p>You rarely do something just out of sheer curiosity.</p>
                 <select class="form-control" id="question7">
-                    <option>1 (disagree)</option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (agree)</option>
+                    <option>5</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="question8">Question 8:</label>
                 <p>You feel superior to other people.</p>
                 <select class="form-control" id="question8">
-                    <option>1 (disagree)</option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (agree)</option>
+                    <option>5</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="question9">Question 9:</label>
                 <p>Being organized is more important to you than being adaptable.</p>
                 <select class="form-control" id="question9">
-                    <option>1 (disagree)</option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (agree)</option>
+                    <option>5</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="question10">Question 10:</label>
                 <p>You are usually highly motivated and energetic.</p>
                 <select class="form-control" id="question10">
-                    <option>1 (disagree)</option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (agree)</option>
+                    <option>5</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary submit">Submit</button>
         </form>
         <hr>
         <!-- bottom links -->
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link" href="api/friends" target="_blank">API Friends List</a>
+                <a class="nav-link" href="/api/friends" target="_blank">API Friends List</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="https://github.com/winpildeu/Friend-Finder" target="_blank">GitHub Repo</a>
@@ -164,13 +165,50 @@
     <!-- Optional JavaScript -->
     <div>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
             crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
     </div>
+    <!-- jQuery script for our form -->
+    <script>
+        $('.submit').on('click', (event) => {
+            // stop default behavior
+            event.preventDefault();
+
+            // capture the input from the form
+            let newFriend = {
+                name: $('#name-input').val().trim(),
+                photo: $('#photo-input').val().trim(),
+                scores: [
+                    $('#question1').val(),
+                    $('#question2').val(),
+                    $('#question3').val(),
+                    $('#question4').val(),
+                    $('#question5').val(),
+                    $('#question6').val(),
+                    $('#question7').val(),
+                    $('#question8').val(),
+                    $('#question9').val(),
+                    $('#question10').val(),
+                ]
+            }
+            console.log(newFriend);
+
+            // send the info to the server through a jQuery post
+            $.post('/api/friends', newFriend,
+            (data) => {
+
+                // TODO: show the matching person as a modal
+                // (data) ? showMatch() : alert("Sorry, no match... =(")
+
+                // clear the inputs after submitting
+                $('#name-input').val('');
+                $('#photo-input').val('');
+            });
+        });
+    </script>
 </body>
 
 </html>
