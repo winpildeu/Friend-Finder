@@ -17,8 +17,8 @@
   <title>Friend Finder!</title>
 </head>
 
-<body>
-  <div class="container">
+<body class="bg-dark">
+  <div class="container bg-light rounded mt-2 mb-2">
     <h1 class="display-4">Survey Questions!</h1>
     <small>Questions borrowed from <a href="https://www.16personalities.com/free-personality-test">here</a></small>
     <hr>
@@ -38,9 +38,10 @@
       <hr>
       <!-- questions area -->
       <h3 class="display-6">Answer truthfully (1: disagree | 5: agree)</h3>
+      <br>
       <div class="form-group">
-        <label for="question1">Question 1:</label>
-        <p>You find it difficult to introduce yourself to other people.</p>
+        <label for="question1" class="font-weight-bold">Question 1:</label>
+        <p class="font-italic">You find it difficult to introduce yourself to other people.</p>
         <select class="form-control" id="question1">
           <option>1</option>
           <option>2</option>
@@ -50,8 +51,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="question2">Question 2:</label>
-        <p>You often get so lost in thoughts that you ignore or forget your surroundings.</p>
+        <label for="question2" class="font-weight-bold">Question 2:</label>
+        <p class="font-italic">You often get so lost in thoughts that you ignore or forget your surroundings.</p>
         <select class="form-control" id="question2">
           <option>1</option>
           <option>2</option>
@@ -61,8 +62,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="question3">Question 3:</label>
-        <p>You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.</p>
+        <label for="question3" class="font-weight-bold">Question 3:</label>
+        <p class="font-italic">You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.</p>
         <select class="form-control" id="question3">
           <option>1</option>
           <option>2</option>
@@ -72,8 +73,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="question4">Question 4:</label>
-        <p>You find it easy to stay relaxed even when there is some pressure.</p>
+        <label for="question4" class="font-weight-bold">Question 4:</label>
+        <p class="font-italic">You find it easy to stay relaxed even when there is some pressure.</p>
         <select class="form-control" id="question4">
           <option>1</option>
           <option>2</option>
@@ -83,8 +84,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="question5">Question 5:</label>
-        <p>You find it difficult to introduce yourself to other people.</p>
+        <label for="question5" class="font-weight-bold">Question 5:</label>
+        <p class="font-italic">You find it difficult to introduce yourself to other people.</p>
         <select class="form-control" id="question5">
           <option>1</option>
           <option>2</option>
@@ -94,8 +95,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="question6">Question 6:</label>
-        <p>You do not usually initiate conversations.</p>
+        <label for="question6" class="font-weight-bold">Question 6:</label>
+        <p class="font-italic">You do not usually initiate conversations.</p>
         <select class="form-control" id="question6">
           <option>1</option>
           <option>2</option>
@@ -105,8 +106,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="question7">Question 7:</label>
-        <p>You rarely do something just out of sheer curiosity.</p>
+        <label for="question7" class="font-weight-bold">Question 7:</label>
+        <p class="font-italic">You rarely do something just out of sheer curiosity.</p>
         <select class="form-control" id="question7">
           <option>1</option>
           <option>2</option>
@@ -116,8 +117,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="question8">Question 8:</label>
-        <p>You feel superior to other people.</p>
+        <label for="question8" class="font-weight-bold">Question 8:</label>
+        <p class="font-italic">You feel superior to other people.</p>
         <select class="form-control" id="question8">
           <option>1</option>
           <option>2</option>
@@ -127,8 +128,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="question9">Question 9:</label>
-        <p>Being organized is more important to you than being adaptable.</p>
+        <label for="question9" class="font-weight-bold">Question 9:</label>
+        <p class="font-italic">Being organized is more important to you than being adaptable.</p>
         <select class="form-control" id="question9">
           <option>1</option>
           <option>2</option>
@@ -138,8 +139,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="question10">Question 10:</label>
-        <p>You are usually highly motivated and energetic.</p>
+        <label for="question10" class="font-weight-bold">Question 10:</label>
+        <p class="font-italic">You are usually highly motivated and energetic.</p>
         <select class="form-control" id="question10">
           <option>1</option>
           <option>2</option>
@@ -148,7 +149,8 @@
           <option>5</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary submit">Submit</button>
+      <br>
+      <button type="submit" class="btn btn-warning btn-block submit"><i class="fas fa-heart"></i> Submit</button>
     </form>
     <hr>
 
@@ -192,11 +194,11 @@
   <script>
     function showMatch(bestMatch) {
       // add the picture of the best match to the modal
-      let pic = $("<img>").addClass("img-fluid rounded mx-auto d-block").attr("src", bestMatch.photo);
+      var pic = $("<img>").addClass("img-fluid rounded mx-auto d-block").attr("src", bestMatch.photo);
       $("#match-pic").append(pic);
 
       // add the best match's name to the modal
-      let name = $("<h1>").text(bestMatch.name);
+      var name = $("<h1>").text(bestMatch.name);
       $("#match-name").append(name);
 
       // show the completed modal
@@ -211,6 +213,10 @@
     $('.submit').on('click', (event) => {
       // stop default behavior
       event.preventDefault();
+
+      // clear contents of the modal for the new match
+      $("#match-pic").empty()
+      $("#match-name").empty();
 
       // capture the input from the form
       let newFriend = {
