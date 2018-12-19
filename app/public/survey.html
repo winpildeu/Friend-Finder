@@ -33,7 +33,7 @@
       <div class="form-group">
         <label for="photo-input">Link to photo (URL):</label>
         <small id="photoHelpBlock" class="font-text text-muted">*Required</small>
-        <input type="text" class="form-control" id="photo-input" required>
+        <input type="url" class="form-control" id="photo-input" required>
       </div>
       <hr>
       <!-- questions area -->
@@ -151,6 +151,7 @@
       <button type="submit" class="btn btn-primary submit">Submit</button>
     </form>
     <hr>
+
     <!-- bottom links -->
     <ul class="nav">
       <li class="nav-item">
@@ -162,6 +163,22 @@
     </ul>
   </div>
 
+  <!-- modal -->
+  <div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Your match:</h3>
+        </div>
+        <div class="modal-body bg-dark">
+          <div id="match-pic"></div>
+        </div>
+        <div class="modal-footer">
+          <span id="match-name"></span>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Optional JavaScript -->
   <div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -173,6 +190,24 @@
   </div>
   <!-- jQuery script for our form -->
   <script>
+    function showMatch(bestMatch) {
+      // add the picture of the best match to the modal
+      let pic = $("<img>").addClass("img-fluid rounded mx-auto d-block").attr("src", bestMatch.photo);
+      $("#match-pic").append(pic);
+
+      // add the best match's name to the modal
+      let name = $("<h1>").text(bestMatch.name);
+      $("#match-name").append(name);
+
+      // show the completed modal
+      $('#myModal').modal({
+            show: true,
+            backdrop: true,
+            focus: true,
+            keyboard: true
+          });
+    }
+
     $('.submit').on('click', (event) => {
       // stop default behavior
       event.preventDefault();
@@ -200,9 +235,8 @@
       $.post('/api/friends', newFriend,
         (data) => {
 
-          (data) ? console.log(data) : console.log(`error!`)
-          // TODO: show the matching person as a modal
-          // (data) ? showMatch() : alert("Sorry, no match... =(")
+          // (data) ? console.log(data) : console.log(`error!`)
+          (data) ? showMatch(data) : alert("Sorry, no match... =(")
 
           // clear the inputs after submitting
           $('#name-input').val('');
